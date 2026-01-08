@@ -1,0 +1,37 @@
+# System Diagnostics Project Gitignore
+
+# Output files with sensitive information
+output/*.txt
+output/*.log
+output/*.json
+output/real_*
+
+# Keep sample output
+!output/sample_output.txt
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.bak
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.env
+
+# Personal data
+private/
+personal/
+*.key
+*.pem
+credentials.txt

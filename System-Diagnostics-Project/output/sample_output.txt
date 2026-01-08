@@ -1,0 +1,81 @@
+---------- ---------- ----------
+Your External/Public IP Address is: [REDACTED]
+---------- ---------- ----------
+Your Internal/Private IP Address is: 10.0.0.X
+---------- ---------- ----------
+Your MAC Address is: AA:BB:CC:XX:XX:XX
+---------- ---------- ----------
+Below are the top 5 processes retrived from your CPU
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         3  0.0  0.0      0     0 ?        S    22:20   0:00 [pool_workqueue_release]
+root         4  0.0  0.0      0     0 ?        I<   22:20   0:00 [kworker/R-rcu_g]
+root         5  0.0  0.0      0     0 ?        I<   22:20   0:00 [kworker/R-rcu_p]
+root         6  0.0  0.0      0     0 ?        I<   22:20   0:00 [kworker/R-slub_]
+root         7  0.0  0.0      0     0 ?        I<   22:20   0:00 [kworker/R-netns]
+---------- ---------- ----------
+Memory Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       788Mi       770Mi       7.9Mi       566Mi       1.2Gi
+Swap:          1.0Gi         0B       1.0Gi
+---------- ---------- ----------
+Active Services and Status:
+  UNIT                                LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service             loaded active running Accounts Service
+  colord.service                      loaded active running Manage, Install and Generate Color Profiles
+  console-setup.service               loaded active exited  Set console font and keymap
+  cron.service                        loaded active running Regular background program processing daemon
+  dbus.service                        loaded active running D-Bus System Message Bus
+  getty@tty1.service                  loaded active running Getty on tty1
+  havepid.service                     loaded active running Entropy Daemon based on the HAVEGE algorithm
+  kmod-static-nodes.service           loaded active exited  Create List of Static Device Nodes
+  keyboard-setup.service              loaded active exited  Set the console keyboard layout
+  lightdm.service                     loaded active running Light Display Manager
+  ModemManager.service                loaded active running Modem Manager
+  networking.service                  loaded active exited  Raise network interfaces
+  NetworkManager-wait-online.service  loaded active exited  Network Manager Wait Online
+  NetworkManager.service              loaded active running Network Manager
+  open-vm-tools.service               loaded active running Service for virtual machines hosted on VMware
+  plymouth-quit-wait.service          loaded active exited  Hold until boot process finishes up
+  plymouth-read-write.service         loaded active exited  Tell Plymouth To Write Out Runtime Data
+  plymouth-start.service              loaded active exited  Show Plymouth Boot Screen
+  polkit.service                      loaded active running Authorization Manager
+  rpc-statd-notify.service            loaded active exited  Notify NFS peers of a restart
+  rsyslog.service                     loaded active running System Logging Service
+  rtkit-daemon.service                loaded active running RealtimeKit Scheduling Policy Service
+  systemd-binfmt.service              loaded active exited  Set Up Additional Binary Formats
+  systemd-journal-flush.service       loaded active exited  Flush Journal to Persistent Storage
+  systemd-journald.service            loaded active running Journal Service
+  systemd-logind.service              loaded active running User Login Management
+  systemd-modules-load.service        loaded active exited  Load Kernel Modules
+  systemd-random-seed.service         loaded active exited  Load/Save OS Random Seed
+  systemd-remount-fs.service          loaded active exited  Remount Root and Kernel File Systems
+  systemd-resolved.service            loaded active running Network Name Resolution
+  systemd-tmpfiles-setup-dev-early.service loaded active exited  Create Static Device Nodes in /dev gracefully
+  systemd-tmpfiles-setup-dev.service  loaded active exited  Create Static Device Nodes in /dev
+  systemd-tmpfiles-setup.service      loaded active exited  Create Volatile Files and Directories
+  systemd-udev-trigger.service        loaded active exited  Coldplug All udev Devices
+  systemd-udevd.service               loaded active running Rule-based Manager for Device Events and Files
+  systemd-update-utmp.service         loaded active exited  Record System Boot/Shutdown in UTMP
+  systemd-user-sessions.service       loaded active exited  Permit User Sessions
+  udisks2.service                     loaded active running Disk Manager
+  upower.service                      loaded active running Daemon for power management
+  user-runtime-dir@1000.service       loaded active exited  User Runtime Directory /run/user/1000
+  user@1000.service                   loaded active running User Manager for UID 1000
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+42 loaded units listed.
+---------- ---------- ----------
+Top 10 Largest File in the /home directory:
+45M     /home/user/downloads/archive.tar
+38M     /home/user/documents/project/build/app.exe  
+32M     /home/user/videos/tutorial_01.mp4
+28M     /home/user/.cache/application/temp.dat
+24M     /home/user/backup/data_backup.zip
+18M     /home/user/.local/share/app/database.db
+15M     /home/user/pictures/collection/image_set.tar
+12M     /home/user/workspace/node_modules/cache.bin
+10M     /home/user/documents/report_final.pdf
+8.5M    /home/user/.config/browser/profile/cache.db
