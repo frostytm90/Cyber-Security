@@ -1,0 +1,131 @@
+========================================
+Network Research - Sample Output
+Date: [TIMESTAMP REDACTED]
+========================================
+
+=== Dependency Check ===
+curl is already installed.
+jq is already installed.
+sshpass is already installed.
+nmap is already installed.
+tor is already installed.
+
+=== Nipe Installation ===
+Nipe directory found. Skipping installation.
+
+=== Starting Anonymous Routing ===
+[*] Stopping Nipe...
+[*] Starting Nipe...
+[*] Waiting for Tor connection...
+Nipe status output: 
+    Status: true
+    Ip: XXX.XXX.XXX.XXX
+    Country: Netherlands
+
+=== Anonymity Verification ===
+Original IP: [REDACTED]
+Spoofed IP: XXX.XXX.XXX.XXX
+Spoofed Country: Netherlands
+Connection: Anonymous routing active
+
+=== User Input ===
+Enter the domain/URL to scan: testsite.example.com
+
+=== Remote Server Connection ===
+Connecting to remote server: 192.0.2.1
+Remote User: user
+Authentication: [USING ENVIRONMENT VARIABLE]
+
+=== Remote Scanning Process ===
+Connected to remote server.
+Creating scan directory: /home/user/scan_results
+Initiating Nmap scan for testsite.example.com...
+
+Starting Nmap 7.92 ( https://nmap.org )
+Nmap scan report for testsite.example.com (93.184.216.34)
+Host is up (0.042s latency).
+
+PORT STATE SERVICE VERSION
+80/tcp open http Apache httpd 2.4.41
+|_http-title: Example Domain
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+443/tcp open https Apache httpd 2.4.41
+|_http-title: Example Domain
+|_ssl-cert: Subject: commonName=www.example.com
+| Not valid before: 2023-01-01T00:00:00
+|_Not valid after: 2024-01-01T23:59:59
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/
+Nmap done: 1 IP address (1 host up) scanned in 15.42 seconds
+
+=== File Transfer ===
+Retrieving scan results via SCP...
+scan_results.txt 100% 2048 1.5MB/s 00:00
+Transfer complete.
+
+=== Local Storage ===
+Results saved to: /home/user/scan_results/scan_results.txt
+Log entry created: /var/log/domain_scan.log
+
+=== HTTP vs HTTPS Traffic Analysis ===
+
+--- HTTP Traffic Capture (Port 80) ---
+Frame 1: 74 bytes on wire
+Ethernet II, Src: [MAC REDACTED], Dst: [MAC REDACTED]
+Internet Protocol Version 4, Src: 10.0.2.15, Dst: 93.184.216.34
+Transmission Control Protocol, Src Port: 54321, Dst Port: 80
+
+HTTP Request:
+GET /login.php HTTP/1.1
+Host: testsite.example.com
+User-Agent: Mozilla/5.0
+Accept: text/html
+Cookie: session=abc123def456
+
+HTTP Response:
+HTTP/1.1 200 OK
+Content-Type: text/html
+Set-Cookie: session=xyz789ghi012
+
+[WARNING] Credentials visible in plaintext:
+username=testuser&password=[EXPOSED IN HTTP]
+
+--- HTTPS Traffic Capture (Port 443) ---
+Frame 1: 74 bytes on wire
+Ethernet II, Src: [MAC REDACTED], Dst: [MAC REDACTED]
+Internet Protocol Version 4, Src: 10.0.2.15, Dst: 93.184.216.34
+Transmission Control Protocol, Src Port: 54322, Dst Port: 443
+
+TLS Handshake:
+TLSv1.3 Record Layer: Handshake Protocol
+    Content Type: Handshake (22)
+    Version: TLS 1.3 (0x0304)
+    [Encrypted Application Data]
+
+[SECURE] All application data encrypted
+No credentials or sensitive data exposed
+
+=== Analysis Summary ===
+1. Anonymous routing successfully established
+2. Remote scanning completed without exposing origin
+3. HTTP traffic exposes sensitive data
+4. HTTPS traffic properly encrypted
+5. All operations logged for audit
+
+=== Security Recommendations ===
+1. Enforce HTTPS-only connections
+2. Implement HSTS headers
+3. Use secure session management
+4. Regular security assessments
+5. Monitor for plaintext protocols
+
+=== Session Complete ===
+Duration: 3 minutes 27 seconds
+Packets Captured: 1,247
+Data Transferred: 15.3 MB
+Anonymity Maintained: Yes
+Errors Encountered: 0
+
+========================================
+End of Report
+========================================
