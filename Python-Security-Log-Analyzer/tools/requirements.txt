@@ -1,0 +1,55 @@
+# Python Security Log Analyzer - Dependencies
+
+# Core Requirements
+# Python 3.7+ (no external dependencies required for basic functionality)
+
+# Optional Dependencies for Enhanced Features
+
+# For performance profiling (optional)
+# memory_profiler>=0.60.0
+
+# For colored console output (optional)  
+# colorama>=0.4.4
+
+# For progress bars (optional)
+# tqdm>=4.65.0
+
+# For configuration file support (optional)
+# pyyaml>=6.0
+
+# For JSON output format (optional)
+# Built-in json module (no installation needed)
+
+# For database storage (optional)
+# sqlite3 (built-in with Python)
+
+# For future machine learning features (optional)
+# scikit-learn>=1.0.2
+# pandas>=1.4.0
+# numpy>=1.22.0
+
+# For web dashboard (optional)
+# flask>=2.0.0
+# plotly>=5.0.0
+
+# For real-time monitoring (optional)
+# watchdog>=2.1.0
+
+# Development Dependencies
+
+# For testing
+# pytest>=7.0.0
+# pytest-cov>=3.0.0
+
+# For code quality
+# pylint>=2.12.0
+# black>=22.0.0
+# mypy>=0.930
+
+# For documentation
+# sphinx>=4.4.0
+# sphinx_rtd_theme>=1.0.0
+
+# Note: The core analyzer works with Python standard library only.
+# Install optional dependencies based on your needs:
+# pip install -r requirements.txt
